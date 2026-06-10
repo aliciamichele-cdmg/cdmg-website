@@ -10,7 +10,7 @@ $theme = get_template_directory_uri();
 				<div>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
 						<img src="<?php echo esc_url( $theme . '/assets/logo-c.png' ); ?>" alt="" class="logo__cmark" />
-						<img src="<?php echo esc_url( $theme . '/assets/logo-light.png' ); ?>" alt="Creative Direct Marketing Group" />
+						<img src="<?php echo esc_url( $theme . '/assets/logo-wordmark-light.png' ); ?>" alt="Creative Direct Marketing Group" />
 					</a>
 					<p class="footer__about">Creative Direct Marketing Group, Inc. A full-service direct response advertising and digital marketing agency. Compliant product marketing made easy.</p>
 					<div class="footer__social"><a href="#">f</a><a href="#">X</a><a href="#">ig</a><a href="#">in</a></div>

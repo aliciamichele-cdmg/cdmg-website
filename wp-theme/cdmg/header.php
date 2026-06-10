@@ -22,7 +22,7 @@ $theme = get_template_directory_uri();
 		<div class="container nav">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
 				<img src="<?php echo esc_url( $theme . '/assets/logo-c.png' ); ?>" alt="" class="logo__cmark" />
-				<img src="<?php echo esc_url( $theme . '/assets/logo-drone.png' ); ?>" alt="Creative Direct Marketing Group" />
+				<img src="<?php echo esc_url( $theme . '/assets/logo-wordmark.png' ); ?>" alt="Creative Direct Marketing Group" />
 			</a>
 			<nav class="nav__menu">
 				<ul class="nav__links">

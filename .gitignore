@@ -14,3 +14,7 @@ __pycache__/
 
 # Built WordPress theme package (regenerable)
 wp-theme/cdmg.zip
+
+# Internal proposal docs (keep out of the public repo)
+CDMG-New-Website-Proposal.docx
+CDMG-New-Website-Proposal.pdf
