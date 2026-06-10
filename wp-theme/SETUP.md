@@ -10,22 +10,22 @@ pushed to live once it looks right.
 
 ---
 
-## What is included in this version
+## What is included
 
-This first version delivers the full site chrome and the complete blog system:
+This is the complete site: every page reproduced in WordPress, plus the blog.
 
 - The header, navigation, and footer, matching the current design.
+- The five marketing pages, each as a dedicated template that reproduces its
+  exact layout: Home, 5 Dimensions, Why You, Our Story, and Contact.
 - The DMU Blog listing page (featured article plus a card grid, filled
   automatically from your posts).
 - The single article page, styled to match and ready for schema and FAQ blocks.
 - A generic page template and the required fallbacks.
 
-**Still to come (next phase):** dedicated templates that reproduce the exact
-layouts of the Home, 5 Dimensions, Why You, Our Story, and Contact pages. Until
-those are added, those pages render in the site chrome with their title and
-content but not their full custom design. **Do not activate this theme on the
-live site until that phase is done.** It is safe and correct to test on staging
-now, especially the blog.
+The marketing pages carry their design in the theme code, so the WordPress
+editor content for those pages can stay empty. The pages only need to exist
+with the correct slugs (below) for the templates to load. Test everything on a
+staging copy first, then push to live.
 
 ---
 
@@ -66,13 +66,22 @@ schema automatically.
 ## Step 3. Create the pages and set the blog
 
 1. **Permalinks:** Settings > Permalinks > choose **Post name**. Save.
-2. **Create pages** with these exact slugs (the navigation links to them):
-   `5-dimensions`, `why-you`, `our-story`, `contact`, and a page titled
-   **Blog** with slug `blog`.
-3. **Set the blog page:** Settings > Reading > "Your homepage displays" >
-   choose a static homepage. Set **Posts page** to **Blog**. (Set the Homepage
-   to your Home page once its template is built; for now you can leave the
-   default.)
+2. **Create pages** with these exact slugs (the templates load by slug, so the
+   slug must match exactly; the page content can be left empty):
+   - `Home` (any title), slug does not matter for the homepage
+   - `5 Dimensions`, slug **`5-dimensions`**
+   - `Why You`, slug **`why-you`**
+   - `Our Story`, slug **`our-story`**
+   - `Contact`, slug **`contact`**
+   - `Blog`, slug **`blog`**
+
+   When you create a page, set the slug in the page's URL/permalink field. If
+   WordPress auto-generates a different slug (for example
+   `5-dimensional-marketing`), change it to the exact slug above or the page
+   will fall back to the plain template.
+3. **Set the homepage and blog:** Settings > Reading > "Your homepage displays"
+   > **A static page**. Set **Homepage** to your `Home` page and **Posts page**
+   to your `Blog` page.
 
 The navigation and footer are part of the theme, so there is no menu to build.
 
@@ -98,10 +107,9 @@ The new post appears on the DMU Blog page automatically. Nothing else to touch.
 
 ## Step 5. Going live
 
-Once the blog looks right on staging and the remaining page templates are in
-place, use the WP Engine User Portal to **push staging to live** (or activate
-the theme on live during a quiet window). Cloudflare cache may need a purge so
-the new look shows immediately.
+Once everything looks right on staging, use the WP Engine User Portal to **push
+staging to live** (or activate the theme on live during a quiet window).
+Cloudflare cache may need a purge so the new look shows immediately.
 
 ---
 
