@@ -99,3 +99,50 @@ function cdmg_primary_category() {
 	}
 	return '';
 }
+
+/**
+ * Helper: the primary category as a clickable tag linking to its topic archive,
+ * so readers can jump from any card or article to all posts on that subject.
+ */
+function cdmg_primary_category_link() {
+	$cats = get_the_category();
+	if ( empty( $cats ) ) {
+		return '';
+	}
+	$c = $cats[0];
+	return '<a class="post__tag" href="' . esc_url( get_category_link( $c ) ) . '">' . esc_html( $c->name ) . '</a>';
+}
+
+/**
+ * The blog toolbar: a keyword search box plus a "browse by topic" row of the
+ * most-used categories. Shown on the blog index and on topic/search archives so
+ * readers can always search or jump to a subject. With a large archive this is
+ * how thousands of posts stay findable.
+ */
+function cdmg_blog_toolbar() {
+	$cats = get_categories( array(
+		'orderby'    => 'count',
+		'order'      => 'DESC',
+		'number'     => 14,
+		'hide_empty' => true,
+		'exclude'    => array( 1 ), // Skip the default "Uncategorized".
+	) );
+	?>
+	<div class="blog-toolbar reveal">
+		<form role="search" method="get" class="blog-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<label class="screen-reader-text" for="blog-search-field">Search articles</label>
+			<input type="search" id="blog-search-field" name="s" placeholder="Search articles by topic or keyword" value="<?php echo esc_attr( get_search_query() ); ?>" />
+			<button type="submit" class="btn btn--primary">Search</button>
+		</form>
+		<?php if ( ! empty( $cats ) ) : ?>
+			<nav class="topic-pills" aria-label="Browse by topic">
+				<span class="topic-pills__label">Browse by topic:</span>
+				<a href="<?php echo esc_url( cdmg_blog_url() ); ?>"<?php echo is_home() ? ' class="is-active"' : ''; ?>>All</a>
+				<?php foreach ( $cats as $c ) : ?>
+					<a href="<?php echo esc_url( get_category_link( $c ) ); ?>"<?php echo is_category( $c->term_id ) ? ' class="is-active"' : ''; ?>><?php echo esc_html( $c->name ); ?></a>
+				<?php endforeach; ?>
+			</nav>
+		<?php endif; ?>
+	</div>
+	<?php
+}

@@ -11,11 +11,16 @@ get_header();
 
 	<section class="page-hero">
 		<div class="container">
-			<div class="breadcrumb">Home / DMU Blog</div>
+			<div class="breadcrumb">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="color:inherit;">Home</a> /
+				<a href="<?php echo esc_url( cdmg_blog_url() ); ?>" style="color:inherit;">DMU Blog</a>
+			</div>
 			<h1>
 				<?php
 				if ( is_search() ) {
-					echo 'Search results for ' . esc_html( get_search_query() );
+					echo 'Search results for &ldquo;' . esc_html( get_search_query() ) . '&rdquo;';
+				} elseif ( is_category() ) {
+					echo 'Topic: ' . single_cat_title( '', false );
 				} elseif ( is_archive() ) {
 					the_archive_title();
 				} else {
@@ -23,6 +28,14 @@ get_header();
 				}
 				?>
 			</h1>
+			<?php
+			global $wp_query;
+			$found = (int) $wp_query->found_posts;
+			if ( $found ) {
+				echo '<p>' . esc_html( number_format_i18n( $found ) ) . ' ' . esc_html( _n( 'article', 'articles', $found, 'cdmg' ) ) . '</p>';
+			}
+			?>
+			<?php cdmg_blog_toolbar(); ?>
 		</div>
 	</section>
 
@@ -38,7 +51,7 @@ get_header();
 								<a href="<?php the_permalink(); ?>" class="post__img g3" style="text-decoration:none;"><?php echo esc_html( cdmg_primary_category() ); ?></a>
 							<?php endif; ?>
 							<div class="post__body">
-								<span class="post__tag"><?php echo esc_html( cdmg_primary_category() ); ?></span>
+								<?php echo cdmg_primary_category_link(); ?>
 								<h3><a href="<?php the_permalink(); ?>" style="color:inherit; text-decoration:none;"><?php the_title(); ?></a></h3>
 								<p><?php echo esc_html( cdmg_card_excerpt( 20 ) ); ?></p>
 								<a href="<?php the_permalink(); ?>" class="post__more">Read more &rarr;</a>

@@ -293,7 +293,7 @@ get_header();
 								<a href="<?php the_permalink(); ?>" class="post__img g1" style="text-decoration:none;"><?php echo esc_html( cdmg_primary_category() ); ?></a>
 							<?php endif; ?>
 							<div class="post__body">
-								<span class="post__tag"><?php echo esc_html( cdmg_primary_category() ); ?></span>
+								<?php echo cdmg_primary_category_link(); ?>
 								<h3><a href="<?php the_permalink(); ?>" style="color:inherit; text-decoration:none;"><?php the_title(); ?></a></h3>
 								<p><?php echo esc_html( cdmg_card_excerpt( 18 ) ); ?></p>
 								<a href="<?php the_permalink(); ?>" class="post__more">Read more &rarr;</a>

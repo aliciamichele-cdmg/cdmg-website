@@ -24,7 +24,7 @@ while ( have_posts() ) :
 			</div>
 			<h1><?php the_title(); ?></h1>
 			<div class="post-meta">
-				<?php if ( $cat ) : ?><span class="post__tag"><?php echo esc_html( $cat ); ?></span><?php endif; ?>
+				<?php echo cdmg_primary_category_link(); ?>
 				<time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time>
 				<span><?php echo esc_html( get_the_author() ); ?></span>
 			</div>

@@ -18,6 +18,7 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 			<div class="breadcrumb">Home / DMU Blog</div>
 			<h1><?php echo esc_html( $intro_title ); ?></h1>
 			<p>Strategy, testing, compliance, and the craft of accountable advertising from the CDMG team.</p>
+			<?php cdmg_blog_toolbar(); ?>
 		</div>
 	</section>
 
@@ -65,7 +66,7 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 					<a href="<?php the_permalink(); ?>" class="post__img g2" style="text-decoration:none;"><?php echo esc_html( cdmg_primary_category() ); ?></a>
 				<?php endif; ?>
 				<div class="post__body">
-					<span class="post__tag"><?php echo esc_html( cdmg_primary_category() ); ?></span>
+					<?php echo cdmg_primary_category_link(); ?>
 					<h3><a href="<?php the_permalink(); ?>" style="color:inherit; text-decoration:none;"><?php the_title(); ?></a></h3>
 					<p><?php echo esc_html( cdmg_card_excerpt( 20 ) ); ?></p>
 					<a href="<?php the_permalink(); ?>" class="post__more">Read more &rarr;</a>
