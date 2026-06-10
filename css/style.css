@@ -107,7 +107,9 @@ p { color: var(--muted); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 78px; }
 .logo { display: flex; align-items: center; gap: 11px; font-family: var(--font-head); font-weight: 800; font-size: 1.28rem; color: var(--navy); letter-spacing: -0.03em; }
 .logo img { height: 34px; width: auto; display: block; }
+.logo img.logo__cmark { height: 40px; }
 .footer .logo img { height: 30px; }
+.footer .logo img.logo__cmark { height: 34px; }
 .logo__mark {
   width: 40px; height: 40px; border-radius: 10px;
   background: linear-gradient(135deg, var(--accent), var(--gold));
