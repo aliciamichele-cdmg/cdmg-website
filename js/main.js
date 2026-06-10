@@ -55,7 +55,7 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* Lead and contact forms submit to the backend at /api/lead */
+  /* Lead and contact forms submit to Formspree, which emails each lead. */
   function setStatus(form, message, ok) {
     var note = form.querySelector(".form-status");
     if (!note) {
@@ -69,10 +69,10 @@
 
   document.querySelectorAll("form[data-lead]").forEach(function (form) {
     /* Inject a hidden honeypot field for spam protection */
-    if (!form.querySelector('input[name="website"]')) {
+    if (!form.querySelector('input[name="_gotcha"]')) {
       var hp = document.createElement("input");
       hp.type = "text";
-      hp.name = "website";
+      hp.name = "_gotcha";
       hp.tabIndex = -1;
       hp.autocomplete = "off";
       hp.setAttribute("aria-hidden", "true");
@@ -89,25 +89,33 @@
       var data = {};
       new FormData(form).forEach(function (v, k) { data[k] = v; });
       data.source = window.location.pathname;
+      data._subject = "New CDMG website lead (" + window.location.pathname + ")";
 
-      fetch("/api/lead", {
+      fetch("https://formspree.io/f/xzdqvlbd", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(data)
       })
-        .then(function (res) { return res.json().then(function (j) { return { ok: res.ok, body: j }; }); })
+        .then(function (res) {
+          return res.json().then(
+            function (j) { return { ok: res.ok, body: j }; },
+            function () { return { ok: res.ok, body: {} }; }
+          );
+        })
         .then(function (r) {
-          if (r.ok && r.body && r.body.ok) {
+          if (r.ok) {
             setStatus(form, "Thank you. Your request has been received. A CDMG strategist will reach out shortly.", true);
             form.reset();
           } else {
-            setStatus(form, (r.body && r.body.error) || "Something went wrong. Please try again.", false);
+            var msg = "Something went wrong. Please try again, or email us directly.";
+            if (r.body && r.body.errors && r.body.errors.length) {
+              msg = r.body.errors.map(function (er) { return er.message; }).join(" ");
+            }
+            setStatus(form, msg, false);
           }
         })
         .catch(function () {
-          /* Backend unreachable (e.g. opened as a static file). Confirm receipt gracefully. */
-          setStatus(form, "Thank you. Your request has been received. A CDMG strategist will reach out shortly.", true);
-          form.reset();
+          setStatus(form, "We couldn't send your request just now. Please try again, or email us directly.", false);
         })
         .finally(function () {
           if (btn) { btn.disabled = false; btn.textContent = original; }
