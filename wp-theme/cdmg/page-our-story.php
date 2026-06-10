@@ -72,7 +72,7 @@ get_header();
 					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/alicia-childers.jpg' ); ?>" alt="Alicia Childers, Chief Marketing Officer" /></div>
 					<h3>Alicia Childers</h3>
 					<div class="role">Chief Marketing Officer</div>
-					<p>Seasoned marketing leader across enterprise and startup environments, integrating AI strategy, innovation, and emerging technology into direct response and omnichannel campaigns to drive smarter, faster results.</p>
+					<p>Seasoned marketing leader across enterprise and startup environments, integrating AI strategy, innovation, and emerging technology into direct response and omnichannel campaigns to drive smarter, faster results. A lover of learning, she most recently earned an executive degree from Harvard University in Disruptive Strategy and Innovation.</p>
 				</div>
 				<div class="card member reveal">
 					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/michael-oppenheimer.jpg' ); ?>" alt="Michael Oppenheimer, Director of Business Development" /></div>
@@ -117,20 +117,29 @@ get_header();
 				<p>Specialists across operations, account management, creative, design, and copy, working under one roof with decades of combined experience.</p>
 			</div>
 			<?php
+			// Each entry: slug (empty if no photo yet), name, title, initials fallback.
 			$team = array(
-				array( 'alyssa-murphree',  'Alyssa Murphree',  'Senior Integrated Operations Manager' ),
-				array( 'joe-hayden',       'Joe Hayden',       'Senior Account Executive' ),
-				array( 'allison-lobel',    'Allison Lobel',    'Account Executive' ),
-				array( 'suzanne-pfeil',    'Suzanne Pfeil',    'Senior Art Director' ),
-				array( 'jessica-bourn',    'Jessica Bourn',    'Junior Art Director' ),
-				array( 'brad-petersen',    'Brad Petersen',    'Copywriter' ),
+				array( 'alyssa-murphree',  'Alyssa Murphree',  'Senior Integrated Operations Manager', 'AM' ),
+				array( 'joe-hayden',       'Joe Hayden',       'Senior Account Executive',             'JH' ),
+				array( 'allison-lobel',    'Allison Lobel',    'Account Executive',                    'AL' ),
+				array( '',                 'Abby Hirt',        'Account Executive',                    'AH' ),
+				array( '',                 'Tonya Mennino',    'Account Executive',                    'TM' ),
+				array( 'suzanne-pfeil',    'Suzanne Pfeil',    'Senior Art Director',                  'SP' ),
+				array( 'jessica-bourn',    'Jessica Bourn',    'Junior Art Director',                  'JB' ),
+				array( '',                 'Jessy Neale',      'Graphic Designer',                     'JN' ),
+				array( '',                 'Matthew Harrison', 'Digital Marketing Specialist',         'MH' ),
+				array( 'brad-petersen',    'Brad Petersen',    'Copywriter',                           'BP' ),
 			);
-			echo '<div class="grid grid-3">';
+			echo '<div class="grid grid-4">';
 			foreach ( $team as $m ) {
+				if ( $m[0] ) {
+					$photo = '<img src="' . esc_url( get_template_directory_uri() . '/assets/team/' . $m[0] . '.jpg' ) . '" alt="' . esc_attr( $m[1] ) . '" />';
+				} else {
+					$photo = esc_html( $m[3] );
+				}
 				printf(
-					'<div class="card member reveal"><div class="member__photo"><img src="%s" alt="%s" /></div><h3>%s</h3><div class="role">%s</div></div>',
-					esc_url( get_template_directory_uri() . '/assets/team/' . $m[0] . '.jpg' ),
-					esc_attr( $m[1] ),
+					'<div class="card member reveal"><div class="member__photo">%s</div><h3>%s</h3><div class="role">%s</div></div>',
+					$photo,
 					esc_html( $m[1] ),
 					esc_html( $m[2] )
 				);
