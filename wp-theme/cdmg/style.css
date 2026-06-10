@@ -1,0 +1,48 @@
+/*
+Theme Name: CDMG
+Theme URI: https://cdmginc.com
+Author: Creative Direct Marketing Group
+Description: Custom theme for Creative Direct Marketing Group. Reproduces the CDMG marketing site design, with a blog optimized for answer engines (schema and FAQ blocks via RankMath). Built to be edited day to day in the WordPress editor, with larger changes maintained in code.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: All rights reserved
+Text Domain: cdmg
+*/
+
+/*
+The full design lives in /css/style.css, which is loaded by functions.php.
+This file only needs the header above for WordPress to recognize the theme,
+plus a few rules for content that only exists inside WordPress (article body
+typography and the RankMath FAQ block), added at the bottom.
+*/
+
+/* ===== Blog article body (the WordPress editor content) ===== */
+.post-content { max-width: 760px; margin: 0 auto; font-size: 1.06rem; color: var(--text); }
+.post-content > * + * { margin-top: 22px; }
+.post-content h2 { font-family: var(--font-head); font-weight: 800; font-size: 1.7rem; color: var(--navy); margin-top: 40px; }
+.post-content h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.3rem; color: var(--navy); margin-top: 32px; }
+.post-content p { line-height: 1.75; }
+.post-content a { color: var(--accent); text-decoration: underline; }
+.post-content ul, .post-content ol { padding-left: 22px; }
+.post-content li { margin: 8px 0; line-height: 1.7; }
+.post-content img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.post-content blockquote { border-left: 4px solid var(--accent); padding: 6px 0 6px 22px; margin: 28px 0; font-size: 1.15rem; color: var(--navy); font-weight: 600; }
+
+/* ===== RankMath / Gutenberg FAQ block, styled to match the site accordion ===== */
+.wp-block-rank-math-faq-block .rank-math-list-item,
+.schema-faq-section .rank-math-list-item { border-bottom: 1px solid var(--line); padding: 4px 0; }
+.wp-block-rank-math-faq-block .rank-math-question { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; color: var(--navy); margin: 18px 0 8px; }
+.wp-block-rank-math-faq-block .rank-math-answer { color: var(--text); line-height: 1.7; padding-bottom: 14px; }
+
+/* Native details/summary fallback for FAQ dropdowns */
+.post-content details { border-bottom: 1px solid var(--line); padding: 18px 0; }
+.post-content summary { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.post-content summary::after { content: "+"; color: var(--accent); font-size: 1.4rem; line-height: 1; }
+.post-content details[open] summary::after { content: "\2212"; }
+.post-content details[open] summary { margin-bottom: 12px; }
+
+/* ===== Blog meta ===== */
+.post-meta { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; color: var(--muted); font-size: .92rem; margin-top: 8px; }
+.post-hero-img { width: 100%; max-height: 460px; object-fit: cover; border-radius: var(--radius); margin: 0 0 8px; box-shadow: var(--shadow); }

@@ -1,0 +1,116 @@
+<?php
+/**
+ * Blog index (the page assigned as "Posts page", slug: blog).
+ *
+ * Reproduces the DMU Blog layout from the static site: a featured article
+ * (the most recent post) followed by a grid of cards (the rest). Content is
+ * pulled automatically from published posts, so publishing a new post adds it
+ * here with no manual editing.
+ */
+get_header();
+
+$blog_page = (int) get_option( 'page_for_posts' );
+$intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
+?>
+
+	<section class="page-hero">
+		<div class="container">
+			<div class="breadcrumb">Home / DMU Blog</div>
+			<h1><?php echo esc_html( $intro_title ); ?></h1>
+			<p>Strategy, testing, compliance, and the craft of accountable advertising from the CDMG team.</p>
+		</div>
+	</section>
+
+<?php if ( have_posts() ) : ?>
+
+	<?php
+	// The first post on page 1 is shown as the featured article.
+	$is_first = ( ! is_paged() );
+	$grid_open = false;
+	while ( have_posts() ) :
+		the_post();
+
+		if ( $is_first ) :
+			$is_first = false;
+			?>
+			<!-- Featured -->
+			<section class="section">
+				<div class="container">
+					<article class="split reveal" style="align-items:stretch;">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<a href="<?php the_permalink(); ?>" class="post__img" style="display:block; min-height:300px; border-radius:var(--radius); background-size:cover; background-position:center; background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'large' ) ); ?>');"></a>
+						<?php else : ?>
+							<a href="<?php the_permalink(); ?>" class="post__img g1" style="height:auto; min-height:300px; border-radius:var(--radius); text-decoration:none;">Featured</a>
+						<?php endif; ?>
+						<div style="display:flex; flex-direction:column; justify-content:center;">
+							<span class="post__tag">Featured<?php $c = cdmg_primary_category(); echo $c ? ' &middot; ' . esc_html( $c ) : ''; ?></span>
+							<h2 style="margin:10px 0 14px;"><a href="<?php the_permalink(); ?>" style="color:inherit; text-decoration:none;"><?php the_title(); ?></a></h2>
+							<p style="margin-bottom:20px;"><?php echo esc_html( cdmg_card_excerpt( 38 ) ); ?></p>
+							<a href="<?php the_permalink(); ?>" class="btn btn--primary" style="align-self:flex-start;">Read Article</a>
+						</div>
+					</article>
+				</div>
+			</section>
+			<?php
+		else :
+			if ( ! $grid_open ) {
+				echo '<section class="section section--light"><div class="container"><div class="grid grid-3">';
+				$grid_open = true;
+			}
+			?>
+			<article class="post reveal">
+				<?php if ( has_post_thumbnail() ) : ?>
+					<a href="<?php the_permalink(); ?>" class="post__img" style="display:block; background-size:cover; background-position:center; background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'medium_large' ) ); ?>');"></a>
+				<?php else : ?>
+					<a href="<?php the_permalink(); ?>" class="post__img g2" style="text-decoration:none;"><?php echo esc_html( cdmg_primary_category() ); ?></a>
+				<?php endif; ?>
+				<div class="post__body">
+					<span class="post__tag"><?php echo esc_html( cdmg_primary_category() ); ?></span>
+					<h3><a href="<?php the_permalink(); ?>" style="color:inherit; text-decoration:none;"><?php the_title(); ?></a></h3>
+					<p><?php echo esc_html( cdmg_card_excerpt( 20 ) ); ?></p>
+					<a href="<?php the_permalink(); ?>" class="post__more">Read more &rarr;</a>
+				</div>
+			</article>
+			<?php
+		endif;
+	endwhile;
+
+	if ( $grid_open ) {
+		echo '</div>';
+		// Pagination under the grid.
+		echo '<div class="reveal" style="text-align:center; margin-top:40px;">';
+		the_posts_pagination( array(
+			'mid_size'  => 1,
+			'prev_text' => '&larr; Newer',
+			'next_text' => 'Older &rarr;',
+		) );
+		echo '</div>';
+		echo '</div></section>';
+	}
+	?>
+
+<?php else : ?>
+
+	<section class="section">
+		<div class="container center">
+			<p>No articles have been published yet. Check back soon.</p>
+		</div>
+	</section>
+
+<?php endif; ?>
+
+	<!-- Newsletter -->
+	<section class="section">
+		<div class="container">
+			<div class="cta-banner reveal">
+				<h2>Get the Direct Marketing Update</h2>
+				<p>Strategy and insight from CDMG delivered to your inbox. No noise, just what is working.</p>
+				<form data-lead style="max-width:440px; margin:0 auto; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+					<input type="email" name="email" placeholder="you@company.com" required style="flex:1; min-width:220px; padding:15px 18px; border-radius:50px; border:none; font-family:var(--font-body); font-size:1rem;" />
+					<button type="submit" class="btn btn--light">Subscribe</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+<?php get_footer(); ?>
