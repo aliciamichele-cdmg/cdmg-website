@@ -22,6 +22,22 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 		</div>
 	</section>
 
+	<!-- Newsletter signup (front and center) -->
+	<section class="section" style="padding-top:48px; padding-bottom:24px;">
+		<div class="container">
+			<div class="newsletter-box reveal">
+				<span class="eyebrow">DMU Newsletter</span>
+				<h2>Subscribe to the DMU Newsletter</h2>
+				<p>Get the Direct Marketing Update: strategy, testing, and what is working in direct response and digital marketing, delivered to your inbox. No noise, just what works.</p>
+				<form data-lead class="newsletter-box__form">
+					<input type="email" name="email" placeholder="you@company.com" required />
+					<button type="submit" class="btn btn--primary btn--lg">Subscribe</button>
+				</form>
+				<p class="form-note">Join thousands of marketers. Unsubscribe anytime.</p>
+			</div>
+		</div>
+	</section>
+
 <?php if ( have_posts() ) : ?>
 
 	<?php
@@ -99,19 +115,5 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 	</section>
 
 <?php endif; ?>
-
-	<!-- Newsletter -->
-	<section class="section">
-		<div class="container">
-			<div class="cta-banner reveal">
-				<h2>Get the Direct Marketing Update</h2>
-				<p>Strategy and insight from CDMG delivered to your inbox. No noise, just what is working.</p>
-				<form data-lead style="max-width:440px; margin:0 auto; display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
-					<input type="email" name="email" placeholder="you@company.com" required style="flex:1; min-width:220px; padding:15px 18px; border-radius:50px; border:none; font-family:var(--font-body); font-size:1rem;" />
-					<button type="submit" class="btn btn--light">Subscribe</button>
-				</form>
-			</div>
-		</div>
-	</section>
 
 <?php get_footer(); ?>

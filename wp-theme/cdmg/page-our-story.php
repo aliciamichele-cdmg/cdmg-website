@@ -63,7 +63,7 @@ get_header();
 					<p>An expert in direct marketing, digital marketing, video, television, radio, and integrated marketing solutions with more than a decade of industry experience. Caleb led the move to Tennessee and drove revenue to one of the best years in the company's history.</p>
 				</div>
 				<div class="card member reveal">
-					<div class="member__photo">AC</div>
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/alicia-childers.jpg' ); ?>" alt="Alicia Childers, Chief Marketing Officer" /></div>
 					<h3>Alicia Childers</h3>
 					<div class="role">Chief Marketing Officer</div>
 					<p>Seasoned marketing leader across enterprise and startup environments, integrating AI strategy, innovation, and emerging technology into direct response and omnichannel campaigns to drive smarter, faster results.</p>
