@@ -49,18 +49,24 @@ get_header();
 				<h2>Leadership</h2>
 				<p>The experience behind the campaigns.</p>
 			</div>
-			<div class="grid grid-2" style="max-width:820px; margin:0 auto;">
+			<div class="grid grid-3">
 				<div class="card member reveal">
-					<div class="member__photo">CH</div>
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/craig-huey.jpg' ); ?>" alt="Craig Huey, Founder and CEO" /></div>
 					<h3>Craig Huey</h3>
 					<div class="role">Founder &amp; CEO</div>
 					<p>One of the world's leading experts in direct response marketing, direct mail, targeting, and data strategy. Winner of 126+ major marketing awards for breakthrough campaigns and a frequent guest on Fox News. Craig publishes the Direct Marketing Update newsletter.</p>
 				</div>
 				<div class="card member reveal">
-					<div class="member__photo">CH</div>
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/caleb-huey.jpg' ); ?>" alt="Caleb Huey, President" /></div>
 					<h3>Caleb Huey</h3>
 					<div class="role">President</div>
 					<p>An expert in direct marketing, digital marketing, video, television, radio, and integrated marketing solutions with more than a decade of industry experience. Caleb led the move to Tennessee and drove revenue to one of the best years in the company's history.</p>
+				</div>
+				<div class="card member reveal">
+					<div class="member__photo">AC</div>
+					<h3>Alicia Childers</h3>
+					<div class="role">Chief Marketing Officer</div>
+					<p>Seasoned marketing leader across enterprise and startup environments, integrating AI strategy, innovation, and emerging technology into direct response and omnichannel campaigns to drive smarter, faster results.</p>
 				</div>
 			</div>
 		</div>
