@@ -49,7 +49,7 @@ get_header();
 				<h2>Leadership</h2>
 				<p>The experience behind the campaigns.</p>
 			</div>
-			<div class="grid grid-3">
+			<div class="grid grid-2" style="max-width:880px; margin:0 auto;">
 				<div class="card member reveal">
 					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/craig-huey.jpg' ); ?>" alt="Craig Huey, Founder and CEO" /></div>
 					<h3>Craig Huey</h3>
@@ -61,6 +61,12 @@ get_header();
 					<h3>Caleb Huey</h3>
 					<div class="role">President</div>
 					<p>An expert in direct marketing, digital marketing, video, television, radio, and integrated marketing solutions with more than a decade of industry experience. Caleb led the move to Tennessee and drove revenue to one of the best years in the company's history.</p>
+				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/scott-sheppard.jpg' ); ?>" alt="Scott Sheppard, Chief Operating Officer" /></div>
+					<h3>Scott Sheppard</h3>
+					<div class="role">Chief Operating Officer</div>
+					<p>Scott brings 20 years of experience as an entrepreneur and executive, from small businesses to the Fortune 200. As COO of Click Effects he grew it into a world leader in video content delivery, serving more than 70% of professional sports teams and major events like the Super Bowl and the Olympics, before managing its sale to ChyronHego.</p>
 				</div>
 				<div class="card member reveal">
 					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/alicia-childers.jpg' ); ?>" alt="Alicia Childers, Chief Marketing Officer" /></div>
