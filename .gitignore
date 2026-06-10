@@ -1,0 +1,13 @@
+# Captured leads (may contain personal info — never publish)
+leads.jsonl
+leads.csv
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Local editor/agent config
+.claude/
