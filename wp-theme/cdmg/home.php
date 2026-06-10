@@ -53,16 +53,16 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 			<!-- Featured -->
 			<section class="section">
 				<div class="container">
-					<article class="split reveal" style="align-items:stretch;">
+					<article class="split reveal" style="align-items:center;">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink(); ?>" class="post__img" style="display:block; min-height:300px; border-radius:var(--radius); background-size:cover; background-position:center; background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'large' ) ); ?>');"></a>
+							<a href="<?php the_permalink(); ?>" class="post__img" style="display:block; height:240px; min-height:0; border-radius:var(--radius); background-size:cover; background-position:center; background-image:url('<?php echo esc_url( get_the_post_thumbnail_url( null, 'large' ) ); ?>');"></a>
 						<?php else : ?>
-							<a href="<?php the_permalink(); ?>" class="post__img g1" style="height:auto; min-height:300px; border-radius:var(--radius); text-decoration:none;">Featured</a>
+							<a href="<?php the_permalink(); ?>" class="post__img g1" style="height:200px; min-height:0; border-radius:var(--radius); text-decoration:none;">Featured</a>
 						<?php endif; ?>
 						<div style="display:flex; flex-direction:column; justify-content:center;">
 							<span class="post__tag">Featured<?php $c = cdmg_primary_category(); echo $c ? ' &middot; ' . esc_html( $c ) : ''; ?></span>
-							<h2 style="margin:10px 0 14px;"><a href="<?php the_permalink(); ?>" style="color:inherit; text-decoration:none;"><?php the_title(); ?></a></h2>
-							<p style="margin-bottom:20px;"><?php echo esc_html( cdmg_card_excerpt( 38 ) ); ?></p>
+							<h2 style="margin:8px 0 12px;"><a href="<?php the_permalink(); ?>" style="color:inherit; text-decoration:none;"><?php the_title(); ?></a></h2>
+							<p style="margin-bottom:18px;"><?php echo esc_html( cdmg_card_excerpt( 28 ) ); ?></p>
 							<a href="<?php the_permalink(); ?>" class="btn btn--primary" style="align-self:flex-start;">Read Article</a>
 						</div>
 					</article>
