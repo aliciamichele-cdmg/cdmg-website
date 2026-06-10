@@ -35,12 +35,12 @@ get_header();
 				echo '<p>' . esc_html( number_format_i18n( $found ) ) . ' ' . esc_html( _n( 'article', 'articles', $found, 'cdmg' ) ) . '</p>';
 			}
 			?>
-			<?php cdmg_blog_toolbar(); ?>
 		</div>
 	</section>
 
 	<section class="section section--light">
 		<div class="container">
+			<div style="margin-bottom:30px;"><?php cdmg_blog_toolbar(); ?></div>
 			<?php if ( have_posts() ) : ?>
 				<div class="grid grid-3">
 					<?php while ( have_posts() ) : the_post(); ?>

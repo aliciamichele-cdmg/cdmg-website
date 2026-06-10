@@ -18,7 +18,6 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 			<div class="breadcrumb">Home / DMU Blog</div>
 			<h1><?php echo esc_html( $intro_title ); ?></h1>
 			<p>Strategy, testing, compliance, and the craft of accountable advertising from the CDMG team.</p>
-			<?php cdmg_blog_toolbar(); ?>
 		</div>
 	</section>
 
@@ -71,7 +70,11 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 			<?php
 		else :
 			if ( ! $grid_open ) {
-				echo '<section class="section section--light"><div class="container"><div class="grid grid-3">';
+				echo '<section class="section section--light"><div class="container">';
+				echo '<div style="margin-bottom:30px;">';
+				cdmg_blog_toolbar();
+				echo '</div>';
+				echo '<div class="grid grid-3">';
 				$grid_open = true;
 			}
 			?>
