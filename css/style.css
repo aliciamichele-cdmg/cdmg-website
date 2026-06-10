@@ -318,6 +318,8 @@ p { color: var(--muted); }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .stats { grid-template-columns: repeat(2,1fr); }
   .split { grid-template-columns: 1fr; }
+  /* When stacked, always show the colored number block above its title */
+  .split__media { order: -1; }
   .gallery { grid-template-columns: repeat(2,1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
