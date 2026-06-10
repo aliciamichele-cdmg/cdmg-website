@@ -49,7 +49,7 @@ get_header();
 				<h2>Leadership</h2>
 				<p>The experience behind the campaigns.</p>
 			</div>
-			<div class="grid grid-2" style="max-width:880px; margin:0 auto;">
+			<div class="grid grid-3">
 				<div class="card member reveal">
 					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/craig-huey.jpg' ); ?>" alt="Craig Huey, Founder and CEO" /></div>
 					<h3>Craig Huey</h3>
@@ -74,6 +74,36 @@ get_header();
 					<div class="role">Chief Marketing Officer</div>
 					<p>Seasoned marketing leader across enterprise and startup environments, integrating AI strategy, innovation, and emerging technology into direct response and omnichannel campaigns to drive smarter, faster results.</p>
 				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/michael-oppenheimer.jpg' ); ?>" alt="Michael Oppenheimer, Director of Business Development" /></div>
+					<h3>Michael Oppenheimer</h3>
+					<div class="role">Director of Business Development</div>
+					<p>More than three decades of broadcast media experience with iHeartMedia and Comcast, plus leadership roles in numerous statewide and national organizations. Michael leads new business development and partnerships for CDMG.</p>
+				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/brandon-brison.jpg' ); ?>" alt="Brandon Brison, Creative Director" /></div>
+					<h3>Brandon Brison</h3>
+					<div class="role">Creative Director</div>
+					<p>An accomplished creative leader with a track record of award-winning work for clients from dynamic startups to billion-dollar corporations. Brandon pairs creativity, strategy, and leadership to deliver a modern brand experience that drives real marketing results.</p>
+				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/jeremiah-dart.jpg' ); ?>" alt="Jeremiah Dart, Director of Data and Audiences" /></div>
+					<h3>Jeremiah Dart</h3>
+					<div class="role">Director of Data &amp; Audiences</div>
+					<p>Sixteen years in marketing, data science, growth strategy, and audience profiling. Jeremiah connects clients with their most relevant prospects by combining profiling, transactional data, machine learning, and response messaging, so ad spend goes to the highest-return channels.</p>
+				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/jorge-sandoval.jpg' ); ?>" alt="Jorge Sandoval, Director of Digital Marketing" /></div>
+					<h3>Jorge Sandoval</h3>
+					<div class="role">Director of Digital Marketing</div>
+					<p>More than eight years enhancing clients' digital reach and engaging new customers. Jorge plans and monitors paid media and budgets day to day, focused on finding the most effective channels for the best return on digital investment.</p>
+				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/nancy-gullette.jpg' ); ?>" alt="Nancy Gullette, Director of Print and Production" /></div>
+					<h3>Nancy Gullette</h3>
+					<div class="role">Director of Print &amp; Production</div>
+					<p>A Nashville native and agency veteran who worked in the country music industry and at one of Tennessee's top agencies. Nancy delivers a world-class range of print and production, from advertisements and brochures to billboards and trade show displays.</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -82,16 +112,31 @@ get_header();
 	<section class="section section--light">
 		<div class="container">
 			<div class="section-head center reveal">
-				<span class="eyebrow">Specialists Under One Roof</span>
+				<span class="eyebrow">The Full Team</span>
 				<h2>A full team for full-service marketing</h2>
-				<p>Our team spans operations, business development, creative direction, account management, design, data analysis, print production, and digital marketing, with decades of combined experience.</p>
+				<p>Specialists across operations, account management, creative, design, and copy, working under one roof with decades of combined experience.</p>
 			</div>
-			<div class="grid grid-4">
-				<div class="card member reveal"><div class="member__photo">BD</div><h3>Business Development</h3><div class="role">Growth &amp; Partnerships</div></div>
-				<div class="card member reveal"><div class="member__photo">CD</div><h3>Creative Direction</h3><div class="role">Copy &amp; Concept</div></div>
-				<div class="card member reveal"><div class="member__photo">DA</div><h3>Data &amp; Analytics</h3><div class="role">Testing &amp; Targeting</div></div>
-				<div class="card member reveal"><div class="member__photo">PP</div><h3>Print Production</h3><div class="role">Direct Mail Delivery</div></div>
-			</div>
+			<?php
+			$team = array(
+				array( 'alyssa-murphree',  'Alyssa Murphree',  'Senior Integrated Operations Manager' ),
+				array( 'joe-hayden',       'Joe Hayden',       'Senior Account Executive' ),
+				array( 'allison-lobel',    'Allison Lobel',    'Account Executive' ),
+				array( 'suzanne-pfeil',    'Suzanne Pfeil',    'Senior Art Director' ),
+				array( 'jessica-bourn',    'Jessica Bourn',    'Junior Art Director' ),
+				array( 'brad-petersen',    'Brad Petersen',    'Copywriter' ),
+			);
+			echo '<div class="grid grid-3">';
+			foreach ( $team as $m ) {
+				printf(
+					'<div class="card member reveal"><div class="member__photo"><img src="%s" alt="%s" /></div><h3>%s</h3><div class="role">%s</div></div>',
+					esc_url( get_template_directory_uri() . '/assets/team/' . $m[0] . '.jpg' ),
+					esc_attr( $m[1] ),
+					esc_html( $m[1] ),
+					esc_html( $m[2] )
+				);
+			}
+			echo '</div>';
+			?>
 		</div>
 	</section>
 
