@@ -200,13 +200,13 @@ get_header();
 					</div>
 					<div class="testi reveal">
 						<div class="testi__stars">&starf;&starf;&starf;&starf;&starf;</div>
-						<p class="testi__text">"My launch and growth successes: your CDMG team is the best."</p>
-						<div class="testi__who">Jeff Lobell<small>Founder, True Religion Jeans</small></div>
+						<p class="testi__text">"CDMG gave me phenomenal results. ROAS over 20X on many occasions. We worked with them from start up, to over $70M in sales."</p>
+						<div class="testi__who">Ricky Write<small>Former President/CEO, Alkaline88</small></div>
 					</div>
 					<div class="testi reveal">
 						<div class="testi__stars">&starf;&starf;&starf;&starf;&starf;</div>
-						<p class="testi__text">"CDMG gave me phenomenal results. ROAS over 20X on many occasions. We worked with them from start up, to over $70M in sales."</p>
-						<div class="testi__who">Ricky Write<small>Former President/CEO, Alkaline88</small></div>
+						<p class="testi__text">"My launch and growth successes: your CDMG team is the best."</p>
+						<div class="testi__who">Jeff Lobell<small>Founder, True Religion Jeans</small></div>
 					</div>
 					<div class="testi reveal">
 						<div class="testi__stars">&starf;&starf;&starf;&starf;&starf;</div>
