@@ -25,7 +25,21 @@ get_header();
 				<p style="margin:0 0 16px;">Our approach is built on thoroughly tested copy and messaging, a comprehensive multi-pronged delivery strategy, and innovative yet cost-effective tactics. The goal is always the same. We increase your response, your market presence, and your profits through accountable advertising.</p>
 				<p>Along the way we have won more than 100 marketing awards for breakthrough, profitable campaigns, and we have helped turn startups into corporations and established businesses into multibillion-dollar enterprises.</p>
 			</div>
-			<div class="split__media reveal"><div class="big">Est. 1985 in California<br />Now in Nashville</div></div>
+			<div class="reveal">
+				<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/building-1313.jpg' ); ?>" alt="CDMG's historic office at 1313 4th Ave North, Nashville" style="width:100%; height:auto; display:block; border-radius:var(--radius); box-shadow:var(--shadow);" />
+				<p style="text-align:center; font-size:.86rem; color:var(--muted); margin-top:12px;">Our historic home at 1313 4th Ave North, Nashville. Established 1985 in California, headquartered in Nashville since 2020.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- InfoMat sister company -->
+	<section class="section section--light">
+		<div class="container">
+			<div class="section-head center reveal" style="max-width:780px;">
+				<span class="eyebrow">Our Sister Company</span>
+				<h2>InfoMat: our in-house data engine since 1978</h2>
+				<p>CDMG's targeting advantage runs through InfoMat, our in-house sister company founded in 1978. InfoMat is a postal and email list brokerage and management firm, which means the audience data and metadata most agencies have to outsource lives right under our own roof. By combining transactional records, profiling, and modeling in-house, we connect your message to the most relevant prospects with precision, so every targeting decision is backed by real data and every dollar of spend works harder.</p>
+			</div>
 		</div>
 	</section>
 
@@ -120,8 +134,8 @@ get_header();
 			// Each entry: slug (empty if no photo yet), name, title, initials fallback.
 			$team = array(
 				array( 'alyssa-murphree',  'Alyssa Murphree',  'Senior Integrated Operations Manager', 'AM' ),
-				array( 'joe-hayden',       'Joe Hayden',       'Senior Account Executive',             'JH' ),
-				array( 'allison-lobel',    'Allison Lobel',    'Account Executive',                    'AL' ),
+				array( 'joe-hayden',       'Joe Hayden',       'Account Director',                     'JH' ),
+				array( 'allison-lobel',    'Allison Lobel',    'Senior Account Executive',             'AL' ),
 				array( '',                 'Abby Hirt',        'Account Executive',                    'AH' ),
 				array( '',                 'Tonya Mennino',    'Account Executive',                    'TM' ),
 				array( 'suzanne-pfeil',    'Suzanne Pfeil',    'Senior Art Director',                  'SP' ),

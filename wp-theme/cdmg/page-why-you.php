@@ -70,12 +70,7 @@ get_header();
 				<span class="eyebrow">In Good Company</span>
 				<h2>Brands that have trusted CDMG</h2>
 			</div>
-			<div class="logos__row reveal">
-				<span>Sun Chlorella</span><span>Healwell AI</span><span>Yerbae</span><span>WeightWatchers</span>
-				<span>Humana</span><span>Chevron</span><span>1-800 Contacts</span><span>The Weather Channel</span>
-				<span>Prairie Operating Co.</span><span>Alkaline88</span><span>True Religion Jeans</span><span>Starfighters Space</span>
-				<span>The Good Flour Co.</span>
-			</div>
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/client-logos.png' ); ?>" alt="Brands that have trusted CDMG, including True Religion, TheStreet, Humana, The Motley Fool, Chevron, The Weather Channel, 1-800 Contacts, WeightWatchers, Skechers, Alkaline88, Zacks, and Truth" class="reveal" style="display:block; max-width:680px; width:100%; height:auto; margin:0 auto;" />
 		</div>
 	</section>
 
