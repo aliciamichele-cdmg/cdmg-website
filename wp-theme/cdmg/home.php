@@ -50,7 +50,7 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 			$is_first = false;
 			?>
 			<!-- Featured -->
-			<section class="section">
+			<section class="section" style="padding-bottom:32px;">
 				<div class="container">
 					<article class="split reveal" style="align-items:center;">
 						<?php if ( has_post_thumbnail() ) : ?>
@@ -71,6 +71,7 @@ $intro_title = $blog_page ? get_the_title( $blog_page ) : 'Learn from the pros';
 		else :
 			if ( ! $grid_open ) {
 				echo '<section class="section section--light"><div class="container">';
+				echo '<div class="section-head center reveal"><span class="eyebrow">The Full Library</span><h2>More from the DMU Blog</h2><p>Search by keyword or pick a topic to dig into thousands of articles of strategy, testing, and what is working.</p></div>';
 				echo '<div style="margin-bottom:30px;">';
 				cdmg_blog_toolbar();
 				echo '</div>';
