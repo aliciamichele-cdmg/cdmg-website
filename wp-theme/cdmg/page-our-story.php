@@ -142,6 +142,7 @@ get_header();
 				array( 'jessica-bourn',    'Jessica Bourn',    'Junior Art Director',                  'JB' ),
 				array( '',                 'Jessy Neale',      'Graphic Designer',                     'JN' ),
 				array( '',                 'Matthew Harrison', 'Digital Marketing Specialist',         'MH' ),
+				array( 'mia-anseman',      'Mia Anseman',      'Digital Marketing Specialist',         'MA' ),
 				array( 'brad-petersen',    'Brad Petersen',    'Copywriter',                           'BP' ),
 			);
 			echo '<div class="grid grid-4">';
