@@ -129,6 +129,18 @@ get_header();
 					<div class="role">Director of Print &amp; Production</div>
 					<p>A Nashville native and agency veteran who worked in the country music industry and at one of Tennessee's top agencies. Nancy delivers a world-class range of print and production, from advertisements and brochures to billboards and trade show displays.</p>
 				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/joe-hayden.jpg' ); ?>" alt="Joe Hayden, Account Director" /></div>
+					<h3>Joe Hayden</h3>
+					<div class="role">Account Director</div>
+					<p>Over eight years in direct marketing and more than five in account management. Joe partners with clients to plan and implement their campaigns, making sure branding, communication, and deadlines are met with a high level of attention and enthusiasm.</p>
+				</div>
+				<div class="card member reveal">
+					<div class="member__photo"><img src="<?php echo esc_url( get_template_directory_uri() . '/assets/team/suzanne-pfeil.jpg' ); ?>" alt="Suzanne Pfeil, Senior Art Director" /></div>
+					<h3>Suzanne Pfeil</h3>
+					<div class="role">Senior Art Director</div>
+					<p>Suzanne began as a photographer and spent more than two decades as a graphic designer and photographer for boutique agencies and Fortune 500 companies. From brand identity and environmental graphics to print, web design, and photography, she delivers visual communication that performs, and meets every deadline doing it.</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -145,18 +157,16 @@ get_header();
 			// Each entry: slug (empty if no photo yet), name, title, initials fallback.
 			$team = array(
 				array( 'alyssa-murphree',  'Alyssa Murphree',  'Senior Integrated Operations Manager', 'AM' ),
-				array( 'joe-hayden',       'Joe Hayden',       'Account Director',                     'JH' ),
 				array( 'allison-lobel',    'Allison Lobel',    'Senior Account Executive',             'AL' ),
 				array( '',                 'Abby Hirt',        'Account Executive',                    'AH' ),
 				array( '',                 'Tonya Mennino',    'Account Executive',                    'TM' ),
-				array( 'suzanne-pfeil',    'Suzanne Pfeil',    'Senior Art Director',                  'SP' ),
 				array( 'jessica-bourn',    'Jessica Bourn',    'Junior Art Director',                  'JB' ),
 				array( '',                 'Jessy Neale',      'Graphic Designer',                     'JN' ),
 				array( '',                 'Matthew Harrison', 'Digital Marketing Specialist',         'MH' ),
 				array( 'mia-anseman',      'Mia Anseman',      'Digital Marketing Specialist',         'MA' ),
 				array( 'brad-petersen',    'Brad Petersen',    'Copywriter',                           'BP' ),
 			);
-			echo '<div class="grid grid-4">';
+			echo '<div class="grid grid-3">';
 			foreach ( $team as $m ) {
 				if ( $m[0] ) {
 					$photo = '<img src="' . esc_url( get_template_directory_uri() . '/assets/team/' . $m[0] . '.jpg' ) . '" alt="' . esc_attr( $m[1] ) . '" />';
