@@ -37,7 +37,7 @@ get_header();
 		<div class="container">
 			<div class="section-head center reveal" style="max-width:780px;">
 				<span class="eyebrow">Our Sister Company</span>
-				<h2>InfoMat: our in-house data engine since 1978</h2>
+				<h2>InfoMat: our in-house data engine, established in 1978</h2>
 				<p>CDMG's targeting advantage runs through InfoMat, our in-house sister company founded in 1978. InfoMat is a postal and email list brokerage and management firm, which means the audience data and metadata most agencies have to outsource lives right under our own roof. By combining transactional records, profiling, and modeling in-house, we connect your message to the most relevant prospects with precision, so every targeting decision is backed by real data and every dollar of spend works harder.</p>
 			</div>
 		</div>
