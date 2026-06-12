@@ -58,7 +58,7 @@ get_header();
 				<ul class="check-list">
 					<li>Paid media and search</li>
 					<li>Social media marketing</li>
-					<li>Landing pages built to convert</li>
+					<li>AEO-optimized landing pages built to convert</li>
 					<li>Email and marketing automation</li>
 					<li>AI visibility and Answer Engine Optimization (AEO)</li>
 				</ul>
@@ -77,7 +77,7 @@ get_header();
 				<p style="margin:16px 0;">Television, radio, and traditional channels still reach audiences at scale. We integrate them into the campaign and hold them to the same standard of accountability as every other dimension.</p>
 				<ul class="check-list">
 					<li>Television and radio</li>
-					<li>Connected TV (CTV) and streaming ads</li>
+					<li>Connected TV (CTV) streaming ads</li>
 					<li>Traditional channel integration</li>
 					<li>Tracked, accountable media buys</li>
 				</ul>
