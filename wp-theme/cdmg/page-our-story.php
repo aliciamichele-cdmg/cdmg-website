@@ -56,7 +56,7 @@ get_header();
 	</section>
 
 	<!-- Milestones timeline -->
-	<section class="section">
+	<section class="section" style="padding-bottom:36px;">
 		<div class="container">
 			<div class="section-head center reveal">
 				<span class="eyebrow">Four Decades of Milestones</span>
@@ -67,7 +67,7 @@ get_header();
 	</section>
 
 	<!-- Leadership -->
-	<section class="section" id="team">
+	<section class="section" id="team" style="padding-top:40px;">
 		<div class="container">
 			<div class="section-head center reveal">
 				<span class="eyebrow">Our Team</span>
