@@ -81,6 +81,34 @@ get_header();
 		</div>
 	</section>
 
+	<!-- ===== AI visibility differentiator ===== -->
+	<section class="section section--navy">
+		<div class="container">
+			<div class="section-head center reveal" style="max-width:760px;">
+				<span class="eyebrow">The CDMG Difference</span>
+				<h2>Built to win in the AI era</h2>
+				<p>Buyers now ask ChatGPT, Claude, Perplexity, and Google's AI for answers. Every CDMG campaign is engineered for that shift, so your brand is the one these engines surface, quote, and recommend.</p>
+			</div>
+			<div class="grid grid-3" style="margin-top:8px;">
+				<div class="reveal" style="text-align:center;">
+					<div style="font-family:var(--font-head); font-weight:800; color:var(--gold); font-size:1.2rem; margin-bottom:8px;">AEO on every campaign</div>
+					<p>Optimized to be read, understood, and cited by the answer engines.</p>
+				</div>
+				<div class="reveal" style="text-align:center;">
+					<div style="font-family:var(--font-head); font-weight:800; color:var(--gold); font-size:1.2rem; margin-bottom:8px;">Promoted to the LLMs</div>
+					<p>We actively work to get our clients surfaced inside ChatGPT, Claude, and more.</p>
+				</div>
+				<div class="reveal" style="text-align:center;">
+					<div style="font-family:var(--font-head); font-weight:800; color:var(--gold); font-size:1.2rem; margin-bottom:8px;">Tracked and tuned</div>
+					<p>We monitor your AI-search visibility and keep improving it.</p>
+				</div>
+			</div>
+			<div class="reveal" style="text-align:center; margin-top:36px;">
+				<a href="<?php echo esc_url( home_url( '/5-dimensions/' ) ); ?>" class="btn btn--primary btn--lg">See How It Works</a>
+			</div>
+		</div>
+	</section>
+
 	<!-- ===== 5 Dimensional Marketing cards ===== -->
 	<section class="section section--light">
 		<div class="container">
