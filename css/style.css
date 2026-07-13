@@ -372,8 +372,10 @@ a.post__tag:hover { opacity: .8; }
 .footer__legal { display:flex; gap:22px; flex-wrap:wrap; }
 
 /* ----- Reveal animation ----- */
-.reveal { opacity:0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.in { opacity:1; transform:none; }
+/* Scroll-reveal only hides content when JS is confirmed running (html.js).
+   Without JS (including AI/search crawlers), everything renders visible. */
+.js .reveal { opacity:0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity:1; transform:none; }
 
 /* ----- Responsive ----- */
 @media (max-width: 980px) {

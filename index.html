@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/cdmg-favicon.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js");</script>
 
   <!-- Canonical + social preview -->
   <link rel="canonical" href="https://cdmginc.com/" />
@@ -53,19 +54,84 @@
           "contactType": "sales",
           "email": "info@cdmginc.com",
           "areaServed": "US"
-        }
+        },
+        "award": [
+          "ANA International ECHO Awards",
+          "Web Marketing Association WebAwards",
+          "B2 Awards",
+          "MarCom Awards"
+        ],
+        "knowsAbout": [
+          "Direct response advertising",
+          "Direct mail marketing",
+          "Compliant product marketing",
+          "Digital marketing",
+          "Answer engine optimization (AEO)",
+          "Connected TV and media buying"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://cdmginc.com/#craig-huey",
+        "name": "Craig Huey",
+        "jobTitle": "Founder & CEO",
+        "worksFor": { "@id": "https://cdmginc.com/#organization" },
+        "description": "Craig Huey is the founder and CEO of Creative Direct Marketing Group (CDMG), a direct response marketing expert, winner of 126+ major marketing awards, and publisher of the Direct Marketing Update newsletter.",
+        "url": "https://cdmginc.com/our-story/#team",
+        "knowsAbout": ["Direct response marketing", "Direct mail", "Audience targeting", "Data strategy"]
       },
       {
         "@type": "WebSite",
         "@id": "https://cdmginc.com/#website",
         "url": "https://cdmginc.com/",
         "name": "Creative Direct Marketing Group",
-        "publisher": { "@id": "https://cdmginc.com/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": { "@type": "EntryPoint", "urlTemplate": "https://cdmginc.com/?s={search_term_string}" },
-          "query-input": "required name=search_term_string"
-        }
+        "publisher": { "@id": "https://cdmginc.com/#organization" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://cdmginc.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is direct response advertising?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Direct response advertising is built to produce a measurable action from the audience, such as a call, a click, or a purchase. Every campaign is tracked so you can see exactly what it returns, which is the foundation of the accountable advertising we practice." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does \"compliant product marketing\" mean?",
+            "acceptedAnswer": { "@type": "Answer", "text": "We build campaigns for product and regulated categories where the creative must perform and stay within the rules. We pair persuasive, tested messaging with the required disclosures and review so your marketing is both effective and compliant." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 5 Dimensional Marketing?",
+            "acceptedAnswer": { "@type": "Answer", "text": "5 Dimensional Marketing is CDMG's proprietary methodology that combines five disciplines into one accountable growth engine: Load & Aim (strategy and story), Direct Mail Magic, Digital Marketing, Media Revived (TV, CTV, streaming, and radio), and Test, Analyze, Tune (continuous data-driven optimization)." }
+          },
+          {
+            "@type": "Question",
+            "name": "What industries does CDMG serve?",
+            "acceptedAnswer": { "@type": "Answer", "text": "CDMG serves consumer health, financial products and publishers, nutrition and supplements, insurance, energy, media and broadcast, apparel and lifestyle, and emerging brands, with particular depth in regulated and compliance-sensitive categories." }
+          },
+          {
+            "@type": "Question",
+            "name": "What size of business do you work with?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Both. Over more than 40 years we have helped transform startups into large corporations and scaled established businesses into multibillion-dollar enterprises. The methodology adapts to where you are." }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes CDMG different from other marketing agencies?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Accountable advertising: every CDMG campaign is engineered to be measured, backed by four decades of direct response testing, in-house audience data through our sister company InfoMat (established 1978), and optimization for AI answer engines so clients get found where buyers now ask questions." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is CDMG located?",
+            "acceptedAnswer": { "@type": "Answer", "text": "CDMG was founded in California in 1985 and moved to Nashville, Tennessee in 2020. Our office is at 1313 4th Ave North, Nashville, TN 37208." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I get started with CDMG?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Request a free consultation through the contact page, call 615.933.4647, or email info@cdmginc.com. We will talk through your product, your goals, and what accountable advertising can do for your response and your profit." }
+          }
+        ]
       }
     ]
   }
@@ -390,12 +456,28 @@
           <div class="faq__a"><p>We build campaigns for product and regulated categories where the creative must perform and stay within the rules. We pair persuasive, tested messaging with the required disclosures and review so your marketing is both effective and compliant.</p></div>
         </div>
         <div class="faq__item">
+          <button class="faq__q">What is 5 Dimensional Marketing? <span class="ico">+</span></button>
+          <div class="faq__a"><p>5 Dimensional Marketing is CDMG's proprietary methodology that combines five disciplines into one accountable growth engine: Load &amp; Aim (strategy and story), Direct Mail Magic, Digital Marketing, Media Revived (TV, CTV, streaming, and radio), and Test, Analyze, Tune (continuous data-driven optimization).</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">What industries does CDMG serve? <span class="ico">+</span></button>
+          <div class="faq__a"><p>CDMG serves consumer health, financial products and publishers, nutrition and supplements, insurance, energy, media and broadcast, apparel and lifestyle, and emerging brands, with particular depth in regulated and compliance-sensitive categories.</p></div>
+        </div>
+        <div class="faq__item">
           <button class="faq__q">What size of business do you work with? <span class="ico">+</span></button>
           <div class="faq__a"><p>Both. Over more than 40 years we have helped transform startups into large corporations and scaled established businesses into multibillion-dollar enterprises. The methodology adapts to where you are.</p></div>
         </div>
         <div class="faq__item">
+          <button class="faq__q">What makes CDMG different from other marketing agencies? <span class="ico">+</span></button>
+          <div class="faq__a"><p>Accountable advertising: every CDMG campaign is engineered to be measured, backed by four decades of direct response testing, in-house audience data through our sister company InfoMat (established 1978), and optimization for AI answer engines so clients get found where buyers now ask questions.</p></div>
+        </div>
+        <div class="faq__item">
           <button class="faq__q">Where is CDMG located? <span class="ico">+</span></button>
           <div class="faq__a"><p>CDMG was founded in California in 1985 and moved to Nashville, Tennessee in 2020. Our office is at 1313 4th Ave North, Nashville, TN 37208.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q">How do I get started with CDMG? <span class="ico">+</span></button>
+          <div class="faq__a"><p>Request a free consultation through the <a href="contact.html">contact page</a>, call <a href="tel:6159334647">615.933.4647</a>, or email <a href="mailto:info@cdmginc.com">info@cdmginc.com</a>. We will talk through your product, your goals, and what accountable advertising can do for your response and your profit.</p></div>
         </div>
       </div>
     </div>
@@ -480,22 +562,22 @@
           <h4>Company</h4>
           <a href="contact.html">Let's Talk</a><br />
           <a href="why-you.html">Verticals</a><br />
-          <a href="#">Awards</a><br />
-          <a href="#">Careers</a>
+          <a href="awards.html">Awards</a><br />
+          <a href="careers.html">Careers</a>
         </div>
         <div>
           <h4>Contact</h4>
           <a href="tel:6159334647">615.933.4647</a><br />
           <a href="mailto:info@cdmginc.com">info@cdmginc.com</a><br />
-          <a href="#">1313 4th Ave North<br />Nashville, TN 37208</a>
+          <a href="https://maps.google.com/?q=1313+4th+Ave+North,+Nashville,+TN+37208">1313 4th Ave North<br />Nashville, TN 37208</a>
         </div>
       </div>
       <div class="footer__bottom">
         <span>© <span id="year">2026</span> Creative Direct Marketing Group, Inc. All rights reserved.</span>
         <div class="footer__legal">
-          <a href="#">Accessibility Statement</a>
-          <a href="#">Privacy Policy for Clients</a>
-          <a href="#">Privacy Policy for Consumers</a>
+          <a href="accessibility.html">Accessibility Statement</a>
+          <a href="privacy-policy-clients.html">Privacy Policy for Clients</a>
+          <a href="privacy-policy-consumers.html">Privacy Policy for Consumers</a>
         </div>
       </div>
     </div>
