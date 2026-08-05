@@ -251,8 +251,8 @@ p { color: var(--muted); }
 
 /* ----- Split feature ----- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.split__media { border-radius: var(--radius); min-height: 380px; background: linear-gradient(135deg, var(--light), var(--light-2)); border: 1px solid var(--line); border-top: 4px solid var(--accent); display: grid; place-items: center; color: var(--navy); padding: 40px; box-shadow: var(--shadow-sm); }
-.split__media .big { font-family: var(--font-head); font-weight: 800; font-size: 2rem; text-align: center; color: var(--navy); }
+.split__media { border-radius: var(--radius); min-height: 380px; background: linear-gradient(135deg, #d7e2dc, #c5d3cb); border: 1px solid #b9cabf; border-top: 5px solid var(--accent); display: grid; place-items: center; color: var(--navy); padding: 40px; box-shadow: var(--shadow); }
+.split__media .big { font-family: var(--font-head); font-weight: 800; font-size: 2.3rem; text-align: center; color: var(--navy); }
 
 /* ----- 5 Dimensions: one clean, consistent treatment ----- */
 .dsec { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
