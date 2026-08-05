@@ -255,6 +255,36 @@ p { color: var(--muted); }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .split__media { border-radius: var(--radius); min-height: 380px; background: linear-gradient(135deg, var(--light), var(--light-2)); border: 1px solid var(--line); border-top: 4px solid var(--terra); display: grid; place-items: center; color: var(--navy); padding: 40px; box-shadow: var(--shadow-sm); }
 .split__media .big { font-family: var(--font-head); font-weight: 800; font-size: 2rem; text-align: center; color: var(--navy); }
+
+/* ----- 5 Dimensions: rich per-dimension color themes ----- */
+.dsec { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.dsec .split__media { border-top-width: 6px; }
+.dsec .split__media .big { font-size: 2.1rem; }
+
+.dsec-1 { background: #fdefe6; }
+.dsec-1 .eyebrow, .dsec-1 h2 { color: #b0492f; }
+.dsec-1 .split__media { background: linear-gradient(135deg,#f6d6c3,#efc0a6); border-color: #eec4ad; border-top-color: #b0492f; }
+.dsec-1 .split__media .big { color: #973c25; }
+
+.dsec-2 { background: #fdf3e2; }
+.dsec-2 .eyebrow, .dsec-2 h2 { color: #bf6c1a; }
+.dsec-2 .split__media { background: linear-gradient(135deg,#fbe4c0,#f6d090); border-color: #f2d7a9; border-top-color: #d9772a; }
+.dsec-2 .split__media .big { color: #b0611c; }
+
+.dsec-3 { background: #edf4ef; }
+.dsec-3 .eyebrow, .dsec-3 h2 { color: #4c7460; }
+.dsec-3 .split__media { background: linear-gradient(135deg,#dbeadd,#c6ddca); border-color: #cbdecf; border-top-color: #56806a; }
+.dsec-3 .split__media .big { color: #3d6350; }
+
+.dsec-4 { background: #fdf6e1; }
+.dsec-4 .eyebrow, .dsec-4 h2 { color: #a17c10; }
+.dsec-4 .split__media { background: linear-gradient(135deg,#f7e6ad,#f0d582); border-color: #eedfa4; border-top-color: #c99a1a; }
+.dsec-4 .split__media .big { color: #8f6f0d; }
+
+.dsec-5 { background: #fceee8; }
+.dsec-5 .eyebrow, .dsec-5 h2 { color: #9e3f29; }
+.dsec-5 .split__media { background: linear-gradient(135deg,#f3cfbd,#ecb69f); border-color: #eac5b2; border-top-color: #a8412a; }
+.dsec-5 .split__media .big { color: #8c3721; }
 .check-list li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; color: var(--text); }
 .check-list li::before { content:"✓"; flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-weight: 800; font-size: .8rem; margin-top: 3px; }
 
